@@ -19,18 +19,20 @@ Output: [1,2,1,2]
 const shuffle = function (nums, n) {
 	// create a container to hold the new elements in
 	let container = [];
-	// grab the mid element to increment during each iteration
-	let mid = n;
-	// grab the starting element to increment during each iteration
+	// index to access the first pointer
 	let start = 0;
+	// index to access the mid pointer
+	let mid = n;
+
 	while (start < n) {
 		// push into the container the xn, yn pairs
 		container.push(nums[start], nums[mid]);
-		// increment start
+		// increment start pointer
 		start++;
-		// increment mid
+		// increment mid pointer
 		mid++;
 	}
+	// return the container
 	return container;
 };
 
