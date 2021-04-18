@@ -27,4 +27,4 @@ var findNumbers = function (nums) {
 	return counter;
 };
 
-console.log(findNumbers([12, 345, 2, 6, 7896]));
+console.log(findNumbers([12, 345, 2, 6, 7896])); //2
