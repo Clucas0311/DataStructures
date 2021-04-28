@@ -17,14 +17,20 @@ Output: false
 */
 
 var isSubsequence = function (s, t) {
+	// create two pointers to access both the subsequence and the word
 	let sIdx = 0;
 	let tIdx = 0;
+	// loop as long as index is bounded with subsequence and words
 	while (sIdx < s.length && tIdx < t.length) {
+		// if they equal
 		if (s[sIdx] === t[tIdx]) {
+			// move the sub pointer
 			sIdx++;
 		}
+		// always move the word pointer
 		tIdx++;
 	}
+	// if the subsequence length is met end iteration
 	return sIdx === s.length;
 };
 
