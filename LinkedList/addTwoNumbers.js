@@ -19,6 +19,22 @@ Explanation: 342 + 465 = 807.
  * @param {ListNode} l1
  * @param {ListNode} l2
  * @return {ListNode}
+ * 
+ * 
+ * 
+ * 
+
+Think of this problem like childhood math solving 
+carry
+    1
+      243
+	+ 564
+	______
+	  8 0 7
+
+	so create a linked list doing this approach where we will attach the head the sum to the dummyHead
+	and add the carry to the sum if there is reset the carry every time
+	REMEMBER to get the single digit we will use modulo operator  the sum by 10 and to get the carry we will divide the sum by 10
  */
 
 var addTwoNumbers = function (l1, l2) {
