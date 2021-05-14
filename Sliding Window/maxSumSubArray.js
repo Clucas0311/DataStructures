@@ -4,6 +4,9 @@
  Input: [2, 1, 5, 1, 3, 2], k=3 
 Output: 9
 Explanation: Subarray with maximum sum is [5, 1, 3].
+
+// iterate through the array to get the sum of the length of k
+// check to see if the temp sum is greateter than the previous max sum
  */
 
 const max_sub_array_of_size_k = function (k, arr) {
