@@ -5,8 +5,24 @@
 Output: 9
 Explanation: Subarray with maximum sum is [5, 1, 3].
 
-// iterate through the array to get the sum of the length of k
-// check to see if the temp sum is greateter than the previous max sum
+Steps: 
+This is a sliding window problem, the objective is to remove the first element and add the next element
+Edge Case: if the size is greater than the array length return null;  
+create a maxSum = 0
+create a tempSum = 0
+For example 
+[2, 1, 5, 1, 3, 2] 
+First find the max of the first three elements 2 + 1 + 5 = 8 maxSum = 8
+This will be done by iterating through the array and adding all the elements with the length of k
+Next create a temp variable to hold that max so we can compare to all elements within the array
+tempSum = 8
+now iterate a second time starting at num through the array 
+this will allow us to remove the first element and  add the current element which will be 1
+[2, 1, 5, 1, 3, 2]
+          [     ]
+ remove 2 and add 1
+ now update the max each time until you find the maximum num of the three subarray elements
+
  */
 
 const max_sub_array_of_size_k = function (k, arr) {
